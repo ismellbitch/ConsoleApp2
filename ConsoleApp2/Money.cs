@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp2
 {
-    internal class Money : Pair
+    internal class  Money : Pair
     {
         public Money(double a, double b) : base(a, b)
         {
@@ -21,9 +21,19 @@ namespace ConsoleApp2
             else return new Money(this.A + p.A + 1, (this.B + p.B));
         }
 
+        public override Pair Conj()
+        {
+            throw new NotImplementedException();
+        }
+
         public override Pair Div(Pair p)
         {
                 return new Money(this.A / p.A, this.B / p.B);
+        }
+
+        public override bool Equ(Pair p)
+        {
+            throw new NotImplementedException();
         }
 
         public override Pair Mul(Pair p)

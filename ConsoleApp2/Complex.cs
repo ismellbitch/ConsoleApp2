@@ -31,7 +31,15 @@ namespace ConsoleApp2
         {
             return new Complex((this.A * p.A - this.B * p.B), (this.B * p.B) + (this.B * p.A));
         }
-
+        public override bool Equ(Pair p)
+        {
+            if (this.A == p.A && this.B == p.B) return true;
+            else return false;
+        }
+        public override Pair Conj()
+        {
+            return new Complex(this.A, -this.B);
+        }
         public override string? ToString()
         {
             return this.A+"+"+this.B+"i";

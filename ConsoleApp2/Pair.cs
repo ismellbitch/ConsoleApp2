@@ -26,5 +26,7 @@ namespace ConsoleApp2
         public abstract Pair Sub(Pair p);
         public abstract Pair Mul(Pair p);
         public abstract Pair Div(Pair p);
+        public abstract bool Equ(Pair p);
+        public abstract Pair Conj();
     }
 }
